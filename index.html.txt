@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moja Firma</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: "Segoe UI", Arial, sans-serif; line-height: 1.6; color: #333; background: #f9f9f9; }
+
+    header {
+      background: linear-gradient(135deg, #1e3d59, #3a6073);
+      color: #fff; padding: 60px 20px; text-align: center;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    nav { background: #16324f; padding: 10px 20px; display: flex; justify-content: center; flex-wrap: wrap; }
+    nav a { color: #fff; margin: 5px 15px; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+    nav a:hover { color: #ffd700; }
+
+    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
+    h2 { text-align: center; margin-bottom: 30px; font-size: 2rem; color: #1e3d59; position: relative; }
+    h2::after { content: ""; display: block; width: 60px; height: 3px; background: #1e3d59; margin: 10px auto 0; border-radius: 2px; }
+
+    /* Služby */
+    .services ul, .certs-gallery, .references-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+    }
+    .services li {
+      background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.3s;
+    }
+    .services li:hover { transform: translateY(-5px); }
+
+    /* Referencie */
+    .references-grid div {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .references-grid img {
+      max-width: 120px;
+      margin-bottom: 10px;
+    }
+
+    /* Certifikáty */
+    .certs-gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .certs-gallery img:hover { transform: scale(1.05); }
+
+    /* Kontakt */
+    form { display: grid; gap: 15px; max-width: 600px; margin: auto; }
+    form input, form textarea { padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; }
+    form button { padding: 12px; background: #1e3d59; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1rem; transition: background 0.3s; }
+    form button:hover { background: #3a6073; }
+
+    footer { background: #1e3d59; color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      nav { flex-direction: column; }
+      nav a { margin: 10px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Názov firmy</h1>
+    <p>Profesionálne služby pre vašu spokojnosť</p>
+  </header>
+
+  <nav>
+    <a href="#about">O nás</a>
+    <a href="#services">Služby</a>
+    <a href="#references">Referencie</a>
+    <a href="#certs">Certifikáty</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+
+  <section id="about">
+    <h2>O nás</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      Tu bude opis firmy – história, čomu sa venujete, hlavná činnosť a hodnoty.
+    </p>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Služby</h2>
+    <ul>
+      <li><strong>Služba 1:</strong> Popis služby</li>
+      <li><strong>Služba 2:</strong> Popis služby</li>
+      <li><strong>Služba 3:</strong> Popis služby</li>
+    </ul>
+  </section>
+
+  <section id="references">
+    <h2>Referencie</h2>
+    <div class="references-grid">
+      <div>
+        <img src="logo1.png" alt="Firma 1">
+        <p>Spolupráca s firmou 1 na projekte XY.</p>
+      </div>
+      <div>
+        <img src="logo2.png" alt="Firma 2">
+        <p>Dodávka a montáž pre firmu 2.</p>
+      </div>
+      <div>
+        <img src="logo3.png" alt="Firma 3">
+        <p>Revízne služby pre firmu 3.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certs">
+    <h2>Oprávnenia a certifikáty</h2>
+    <div class="certs-gallery">
+      <img src="certifikat1.jpg" alt="Certifikát 1">
+      <img src="certifikat2.jpg" alt="Certifikát 2">
+      <img src="certifikat3.jpg" alt="Certifikát 3">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Kontaktujte nás</h2>
+    <form>
+      <input type="text" name="name" placeholder="Meno" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" rows="5" placeholder="Vaša správa" required></textarea>
+      <button type="submit">Odoslať</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Moja Firma. Všetky práva vyhradené.</p>
+  </footer>
+
+</body>
+</html>
+
